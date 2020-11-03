@@ -3,9 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by shifeifei on 2020/3/6.
- * <p>
- * 两数之和
+ * 题目：两数之和
  * <p>
  * 给定 nums = [2, 7, 11, 15], target = 9
  * <p>

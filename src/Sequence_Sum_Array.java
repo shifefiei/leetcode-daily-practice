@@ -3,15 +3,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by shifeifei on 2020/3/6.
+ * 题目：和为s的连续正数序列
  * <p>
  * 输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。
  * 序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
  * <p>
  * <p>
  * 示例 1：
- * <p>
- * <p>
  * 输入：target = 9
  * 输出：[[2,3,4],[4,5]]
  * 示例 2：
@@ -27,7 +25,7 @@ import java.util.List;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof
  */
-public class Sequence_Array {
+public class Sequence_Sum_Array {
 
     public static void main(String[] args) {
         int[][] list = findContinuousSequence(9);
@@ -52,9 +50,9 @@ public class Sequence_Array {
                 i++;
             } else {
                 //相等就把指针形成的窗口添加进输出列表中
-                int[] array = new int[j-i];
+                int[] array = new int[j - i];
                 for (int k = i; k < j; k++) {
-                    array[k-i] = k;
+                    array[k - i] = k;
                 }
                 result.add(array);
                 // 上面已经找到了一组连续的序列，还要继续找下一组，次数左边界向右移动
