@@ -33,7 +33,7 @@ public class PreOrder_Create_Tree {
         TreeNode root = new PreOrder_Create_Tree().buildTree(preOrderArray, inOrderArray);
     }
 
-    private TreeNode buildTree(int[] preOrderArray, int[] inOrderArray) {
+    public TreeNode buildTree(int[] preOrderArray, int[] inOrderArray) {
         int preLen = preOrderArray.length;
         int inLen = inOrderArray.length;
 
@@ -68,21 +68,7 @@ public class PreOrder_Create_Tree {
                 pIndex - inLeft + preLeft + 1, preRight,
                 map,
                 pIndex + 1, inRight);
-
         return root;
     }
-
 }
 
-
-class TreeNode {
-    int data;
-
-    TreeNode left;
-
-    TreeNode right;
-
-    public TreeNode(int data) {
-        this.data = data;
-    }
-}
