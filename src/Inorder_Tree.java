@@ -57,7 +57,7 @@ public class Inorder_Tree {
 
     /**
      * 非递归方式遍历
-     * 1.先将左子树的左子树 全部压入栈
+     * 1.先将根节点 和 左子树的左子树 全部压入栈
      * 2.往外弹出栈
      */
     private List<Integer> inOrderStack(TreeNode root) {
