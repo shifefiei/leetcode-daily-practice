@@ -1,3 +1,5 @@
+package tree;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +12,7 @@ import java.util.Map;
  * 中序遍历：  【左 *************** 子 *************** 树】         【 根 】    【右 *************** 子 *************** 树】
  * *********** inLeft                               pIndex-1     pIndex     pIndex+1                           inRight
  * <p>
- * 求 x 的值，x=  - (preLeft + 1) = pIndex-1 - inLeft   => x = pIndex - inLeft + preLeft
+ * 求 x 的值，x - (preLeft + 1) = pIndex-1 - inLeft   => x = pIndex - inLeft + preLeft
  * 则 y = x + 1 = pIndex - inLeft + preLeft + 1
  */
 public class PreOrder_Create_Tree {

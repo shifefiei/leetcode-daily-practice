@@ -29,7 +29,9 @@ public class Gen_Parenthesis {
 
     public List<String> genParenthesis(int n) {
 
-        gen(0, 2 * n, "");
+        //gen(0, 2 * n, "");
+
+        create(0,0,3,"");
         return null;
     }
 
@@ -50,6 +52,32 @@ public class Gen_Parenthesis {
         gen(level + 1, max, s1);
         gen(level + 1, max, s2);
 
+    }
+
+
+    /**
+     * @param left  左括号个数，最大3
+     * @param right 右括号个数，最大3
+     * @param n     括号最大个数
+     * @param s     保存最后生成的括号
+     */
+    private void create(int left, int right, int n, String s) {
+        //表示左括号、右括号都用完了
+        if (left == n && right == n) {
+            System.out.println(s);
+            return;
+        }
+
+        //字符串要合法，左括号一定不能用完
+        if (left < n) {
+            create(left + 1, right, n, s + "(");
+        }
+
+        //字符串要合法，左括号的个数一定是大于右括号的个数
+        if (left > right) {
+            create(left, right + 1, n, s + ")");
+
+        }
     }
 
 }
